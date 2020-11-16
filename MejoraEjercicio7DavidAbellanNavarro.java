@@ -1,5 +1,5 @@
-//David Abellán Navarro 1ºDAM
-//https://github.com/Naabda/Ejercicio6/blob/main/MejoraEjercicio7DavidAbellanNavarro.java
+//David AbellÃ¡n Navarro 1ÂºDAM
+//https://github.com/Naabda/MejoraEjercicio7DavidAbellanNavarro/blob/main/MejoraEjercicio7DavidAbellanNavarro.java
 package EjerciciosEntregados;
 
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 	private static String [] aNombre= new String [contador];
 
 	//Matriz donde
-	//Columna 0 es Tamaño, Columna 1 es Densidad y Columna 2 es el tamaño por densidad.
+	//Columna 0 es TamaÃ±o, Columna 1 es Densidad y Columna 2 es el tamaÃ±o por densidad.
 	private static int [][] mValores= new int [contador][3];
 
 
@@ -34,16 +34,16 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 
 			for (int i = (contador-1); i < contador; i++) {
 
-				System.out.println("Vamos a crear el "+contador+"º terreno");
-				System.out.println("¿Cómo se llama este terreno?");
+				System.out.println("Vamos a crear el "+contador+"Âº terreno");
+				System.out.println("Â¿CÃ³mo se llama este terreno?");
 				String Nombre=teclado.next();
 				aNombre [i]=Nombre;
 
-				System.out.println("¿Qué tamaño tiene?");
-				int tamaño=teclado.nextInt();
-				mValores [i][0]=tamaño;
+				System.out.println("Â¿QuÃ© tamaÃ±o tiene?");
+				int tamaÃ±o=teclado.nextInt();
+				mValores [i][0]=tamaÃ±o;
 
-				System.out.println("¿Y la densidad del terreno?");
+				System.out.println("Â¿Y la densidad del terreno?");
 				int densidad=teclado.nextInt();
 				mValores [i][1]= densidad;
 				mValores [i][2]= mValores[i][0]*mValores[i][1];
@@ -73,7 +73,7 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 				aNombre=aNombreNew;
 				mValores=mValoresNew;
 
-				System.out.println("¿Quieres añadir otro terreno? si/no");
+				System.out.println("Â¿Quieres aÃ±adir otro terreno? si/no");
 				Respuesta=teclado.next();
 				if (Respuesta.equals("si")) {
 
@@ -103,16 +103,16 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 			}
 		}
 
-		System.out.println("\nNúmero de terreno a consultar");
+		System.out.println("\nNÃºmero de terreno a consultar");
 		int Nterreno=teclado.nextInt();
 		Nterreno--;
-		System.out.println("El terreno "+(Nterreno+1)+". "+aNombre[Nterreno]+" hay que reforestarlo con "+mValores[Nterreno][2]+" árboles.\n");
+		System.out.println("El terreno "+(Nterreno+1)+". "+aNombre[Nterreno]+" hay que reforestarlo con "+mValores[Nterreno][2]+" Ã¡rboles.\n");
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Programa que representando la situación copiada en la libreta nos diga la cantidad
-		// de árboles que necesitamos para reforestar cada zona y cuantos árboles necesitamos en total.
+		// Programa que representando la situaciÃ³n copiada en la libreta nos diga la cantidad
+		// de Ã¡rboles que necesitamos para reforestar cada zona y cuantos Ã¡rboles necesitamos en total.
 
 		//Definimos variables.
 		int opcion;
@@ -121,12 +121,12 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 
 		System.out.println("Vamos a crear un mapa");
 
-		//Creamos un menú para poder realizar las acciones más facilmente.
+		//Creamos un menÃº para poder realizar las acciones mÃ¡s facilmente.
 		do {
-			//Definir opciones menú
-			System.out.println("\n1. Asignación de los terrenos.");
+			//Definir opciones menÃº
+			System.out.println("\n1. AsignaciÃ³n de los terrenos.");
 			System.out.println("2. Consultas terrenos.");
-			System.out.println("3. Consulta total árboles.");
+			System.out.println("3. Consulta total Ã¡rboles.");
 			System.out.println("4. Salir.");
 			opcion = teclado.nextInt();
 			switch(opcion) {
@@ -140,13 +140,13 @@ public class MejoraEjercicio7DavidAbellanNavarro {
 				for (int i = 0; i < mValores.length; i++) {
 					Total= mValores[i][2]+Total;
 				}
-				System.out.println("El total de árboles que necesitamos es: "+Total);
+				System.out.println("El total de Ã¡rboles que necesitamos es: "+Total);
 				break;
 			case 4:
 				continuar = false;
 				break;
 			default:
-				System.out.println("Inserte una opción correcta");
+				System.out.println("Inserte una opciÃ³n correcta");
 				break;
 			}
 		}
